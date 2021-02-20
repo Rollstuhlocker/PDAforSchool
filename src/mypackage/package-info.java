@@ -1,1 +1,5 @@
 package mypackage;
+
+/*
+ * Einziges package, gibt es nicht groﬂ was zu beschreiben
+ */
