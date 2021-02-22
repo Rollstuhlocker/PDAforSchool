@@ -4,9 +4,9 @@ import java.util.Stack;
 
 /*
  * Der PDA akzeptiert die Sprache L(G)=a^n b^n c^(m+n) d
- * Die Anfrage ob ein Wort akzeptiert wird kann entweder über einen Boolean abgefragt werden oder wird über die Konsole zurück gegeben 
+ * Die Anfrage ob ein Wort akzeptiert wird kann entweder Ã¼ber einen Boolean abgefragt werden oder wird Ã¼ber die Konsole zurÃ¼ck gegeben 
  * 
- * Zuletzt bearbeitet: 20.02.2021
+ * Zuletzt bearbeitet: 22.02.2021
  */
 
 public class Automat {
@@ -32,14 +32,14 @@ public class Automat {
 
     /*
      * Im Methodenkopf der Methode istWortKorrekt muss das Wort angegeben werden.
-     * Über die Wenn das Wort im Alphabet liegt, gibt die Methode true zurück
+     * Wenn das Wort im Alphabet liegt, gibt die Methode true zurÃ¼ck
      */
     public boolean istWortKorrekt(String s) {
 	while (schleifenbeender == false) { // Schleife, in der das Wort untersucht wird, bis klar ist, dass es in die
 					    // Sprache passt oder eben nicht
 
-	    if (s.isEmpty()) { // Notwendige if Abfrage, weil ein leeres Wort oder nur der Buchstabe a für
-			       // einen Fehler sorgen würden (bei einem leeren String kann kein char abgefragt
+	    if (s.isEmpty()) { // Notwendige if Abfrage, weil ein leeres Wort oder nur der Buchstabe a fÃ¼r
+			       // einen Fehler sorgen wÃ¼rden (bei einem leeren String kann kein char abgefragt
 			       // werden)
 		s = "y";
 	    }
@@ -79,20 +79,20 @@ public class Automat {
 	    }
 	}
 
-	if (z3Bool == true) { // Wenn er Endzustand erreicht ist, wird true zurück gegeben
+	if (z3Bool == true) { // Wenn er Endzustand erreicht ist, wird true zurÃ¼ck gegeben
 	    return true;
 	} else {
-	    return false; // Wort liegt nicht in der Sprache: false wird zurück gegeben
+	    return false; // Wort liegt nicht in der Sprache: false wird zurÃ¼ck gegeben
 	}
 
     }
 
     /*
-     * Im Methodenkopf der Methode Eingabe muss das Wort angegeben werden. Über die
+     * Im Methodenkopf der Methode Eingabe muss das Wort angegeben werden. Ãœber die
      * Konsole wird angezeigt, ob es akzeptiert wird oder nicht
      */
     public void eingabe(String s) {
-	if (this.istWortKorrekt(s)) { // Wenn er Endzustand erreicht ist, wird dies über die Konsole mitgeteilt
+	if (this.istWortKorrekt(s)) { // Wenn er Endzustand erreicht ist, wird dies Ã¼ber die Konsole mitgeteilt
 	    System.out.println("Das Wort wurde akzeptiert!");
 	} else {
 	    System.out.println("Das Wort liegt nicht in der akzeptierten Sprache"); // Wort liegt nicht in der Sprache
@@ -125,7 +125,7 @@ public class Automat {
 	case '#':
 	    z3Bool = true;
 	    schleifenbeender = true;
-	    break; // Wird ein d eingegeben wird geprüft ob der Stack leer ist(Bis auf #). Wenn Ja:
+	    break; // Wird ein d eingegeben wird geprÃ¼ft ob der Stack leer ist(Bis auf #). Wenn Ja:
 		   // Wort passt, wenn Nein: Wort passt nicht
 	}
     }
